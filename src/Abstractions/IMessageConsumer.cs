@@ -11,7 +11,7 @@ public interface IMessageConsumer<TMessage>
     /// </summary>
     /// <param name="envelope">The delivered message envelope.</param>
     /// <param name="cancellationToken">A token that cancels the handling operation.</param>
-    /// <returns>A task that completes when the message has been handled.</returns>
+    /// <returns>A task that completes when the message has been handled. A normal return acknowledges handling; an exception indicates handling failed and the transport may negatively acknowledge or redeliver the message.</returns>
     public ValueTask ConsumeAsync(
         MessageEnvelope<TMessage> envelope,
         CancellationToken cancellationToken = default);
