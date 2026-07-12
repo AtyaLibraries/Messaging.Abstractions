@@ -16,7 +16,7 @@ The package intentionally does not implement a transport. `Atya.Messaging.InMemo
 
 ## Features
 
-- Publisher and consumer interfaces with cancellation-aware `ValueTask` methods.
+- Publisher, consumer, and consumer registry interfaces with cancellation-aware `ValueTask` methods.
 - Immutable message envelopes with message id, optional correlation id, and copied headers.
 - Publish options for transport-neutral metadata.
 - Subscription contracts for removing registered consumers.
@@ -92,6 +92,8 @@ public sealed class CustomerEventConsumer : IMessageConsumer<string>
 }
 ```
 
+Consumer failure semantics are transport-neutral: a normal return acknowledges handling, while an exception indicates handling failed and the transport may negatively acknowledge or redeliver the message.
+
 ## Error Codes
 
 This package does not define Result error codes. Invalid programmer input is rejected with standard .NET argument exceptions through `Atya.Foundation.Guards`.
@@ -109,7 +111,7 @@ Atya.Messaging.Abstractions
 |-- tests/Abstractions.UnitTests
 |-- samples/Abstractions.Samples.Console
 |-- benchmarks/Abstractions.Benchmarks
-|-- Abstractions.sln
+|-- Messaging.Abstractions.sln
 |-- README.md
 `-- LICENSE
 ```
