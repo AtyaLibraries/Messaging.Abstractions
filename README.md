@@ -109,7 +109,7 @@ Atya.Messaging.Abstractions
 |-- tests/Abstractions.UnitTests
 |-- samples/Abstractions.Samples.Console
 |-- benchmarks/Abstractions.Benchmarks
-|-- Abstractions.sln
+|-- Messaging.Abstractions.sln
 |-- README.md
 `-- LICENSE
 ```
