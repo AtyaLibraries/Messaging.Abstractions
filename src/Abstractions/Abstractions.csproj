@@ -12,8 +12,9 @@
     <PackageTags>dotnet;atya;messaging;abstractions;contracts</PackageTags>
     <RepositoryUrl>https://github.com/AtyaLibraries/Messaging.Abstractions</RepositoryUrl>
     <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
-    <!-- Set PackageValidationBaselineVersion to the last stable package version after first stable release. -->
-    <!-- <PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion> -->
+    <PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
 
     <!-- MinVer derives the version from git tags (e.g. tag `v1.2.3` -> 1.2.3). -->
     <MinVerTagPrefix>v</MinVerTagPrefix>
